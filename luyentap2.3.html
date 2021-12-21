@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.-->
+<p><input type="number" id="input" placeholder="enter radius" oninput="caculator()"></p>
+<p>factorial : <span id="result"></span></p>
+<script>
+    function calculatorFactorial(number) {
+        if (number < 0) {
+            alert("số bạn nhập không có giai thừa")
+        } else if (number === 0) {
+           return 1
+        } else {
+            let result = 1;
+            for (i = 1; i <= number; i++) {
+                result *= i;
+            }
+            return result;
+        }
+    }
+    function caculator() {
+        let N = parseInt(document.getElementById("input").value);
+        let result = calculatorFactorial(N)
+document.getElementById("result").innerHTML = result
+    }
+</script>
+</body>
+</html>

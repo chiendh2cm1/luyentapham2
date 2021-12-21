@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.-->
+<script>
+    let a = prompt("input number one");
+    let b = prompt("input number two");
+    let c = prompt("input number three");
+    function isNumbermin(num1, num2, num3) {
+        if(num1<num2 && num1 <num3) {
+            return num1
+        }else if (num2 < num1 && num2 < num3) {
+            return num2
+        }else
+            return num3
+    }
+    let result = isNumbermin(a, b, c);
+    alert(result)
+</script>
+</body>
+</html>

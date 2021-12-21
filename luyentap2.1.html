@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.-->
+<input type="number" oninput="coculator()" id="input">
+<p>result: <span id="result"></span></p>
+<script>
+    function square(number) {
+        let result = number * number;
+        return result;
+    }
+    function coculator() {
+        let inputNumber = parseInt(document.getElementById("input").value)
+        let result = square(inputNumber);
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+</body>
+</html>

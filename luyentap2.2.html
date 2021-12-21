@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p><input type="number" id="input" placeholder="enter radius" oninput="caculator()"></p>
+<p>Aria: <span id="result1"></span> </p>
+<p>Perimeter: <span id="result2"></span> </p>
+<script>
+    // Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được
+    function caculatorAria(r) {
+         result = r*r*3.14;
+         return result;
+    }
+    function caculatorPerimeter(r) {
+        result = r * 2 *3.14;
+        return result;
+    }
+    function caculator() {
+        let radius = parseInt(document.getElementById("input").value);
+        let isAria = parseFloat(caculatorAria(radius));
+        document.getElementById("result1").innerHTML = isAria;
+        let isPerimeter = parseFloat(caculatorPerimeter(radius));
+        document.getElementById("result2").innerHTML = isPerimeter;
+    }
+</script>
+</body>
+</html>
